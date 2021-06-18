@@ -1,6 +1,5 @@
 /*import logo from './small_logo.png';*/
 import {FaSearch} from 'react-icons/fa';
-import {Link} from 'react-router'
 
 
 function NavBar(){
