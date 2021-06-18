@@ -2,7 +2,10 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './navBar';
-import Footer from './footer'
+import Footer from './footer';
+import {FaShoppingCart} from 'react-icons/fa';
+
+
 
 function App() {
   const [items, setItems] = useState([])
@@ -20,9 +23,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1>E-commerce</h1>
-      <h3>An e-commerce website for e-commerce needs!</h3>
-      {/*<button onClick={fetchData}>Welcome</button>*/}
+      <h1>Welcome</h1>
+      <h3>Take a look at some of our bestsellers</h3>
 
       
     <div className ="item-list">
@@ -34,7 +36,7 @@ function App() {
           <p>£{item.price}</p>
           <p>{item.description}</p>
           <p>{item.category}</p>
-          <button class="trolleybtn">Add to trolley</button>
+          <button class="trolleybtn"><FaShoppingCart/></button>
           </article>
         )
       })}
