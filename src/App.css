@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-logo {
@@ -95,6 +96,7 @@ body{
   border-radius: 20px;
   font-size: 1rem;
   padding: 15px;
+  outline:none;
 }
 .navbtn:hover{
   transition: 0.5s;
@@ -128,6 +130,16 @@ body{
 
 }
 
+.navicons{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.navicons > homeicon{
+  display:flex;
+  justify-content:flex-start; 
+}
+
 .trolleybtn{
   margin:3%;
   color: rgb(0, 0, 0);
@@ -137,6 +149,7 @@ body{
   padding: 15px;
   font-size:large;
   border:1px solid rgba(128, 128, 128, 0.212);
+  outline: none;
 }
 
 .trolleybtn:hover{
@@ -145,4 +158,28 @@ body{
   box-shadow: 0 0 11px rgba(33,33,33,.2);
   cursor:pointer;
   color:rgb(254, 189, 105);
+}
+
+
+.basketicon{
+  color:white;
+  font-size: 2.5em;
+  padding:none;
+}
+
+.homeicon{
+  color:white;
+  font-size: 2.5em;
+  padding:none;
+}
+
+.searchicon{
+  color:black;
+  font-size: 2em;
+  padding:none; 
+}
+
+#welcome{
+  margin-top:25%;
+  margin-bottom:50%;
 }

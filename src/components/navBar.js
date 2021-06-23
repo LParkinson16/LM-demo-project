@@ -1,8 +1,8 @@
-/*import logo from './small_logo.png';*/
 import {FaSearch} from 'react-icons/fa';
-
+import React from "react";
 
 function NavBar(){
+    
     return(
         <nav class="nav">
             {/*<img id ="navImg" src={logo} alt="Err"/>*/}
@@ -10,16 +10,23 @@ function NavBar(){
             <input id ="navSearch" type="text" class="input" placeholder="Search"/>
             <FaSearch/>
             </div>
+            
             <section>
-                <button class="navbtn">Home</button>
-                <button class="navbtn">Men</button>
-                <button class="navbtn">Women</button>
-                <button class="navbtn">Contact</button>
-                <button class="navbtn">About</button>
+                    <button class="navbtn">Home</button>
+                
+                    <button class="navbtn">Men</button>
+                
+                    <button class="navbtn">Women</button>
 
+                    <button class="navbtn">About</button>
+
+                    <button class="navbtn">Contact</button>
             </section>
+
         </nav>
+        
     )
 }
+
 
 export default NavBar
