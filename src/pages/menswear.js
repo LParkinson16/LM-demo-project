@@ -1,9 +1,10 @@
-import '../App.css';
+import { useEffect, useState } from 'react'
 import axios from 'axios'
-import {useEffect, useState} from 'react'
-/*import NavBar from '../components/navBar'*/
 import { FaShoppingCart } from 'react-icons/fa';
-
+import { FaShoppingBasket } from 'react-icons/fa'
+import '../App.css';
+/*import NavBar from '../components/navBar'*/
+import { useCart, useCartUpdate } from '../components/context';
 
 function Menswear(){
 const [items, setItems] = useState([])
@@ -17,10 +18,14 @@ useEffect(()=>{
     })
 }, [])
 
+const cart = useCart()
+const handleClick = useCartUpdate()
+
 return(
     <div className="App">
     {/*<NavBar/>*/}     
     <h1>Menswear</h1>
+   <h1><FaShoppingBasket/> {cart.length}</h1>
     <div className='item-list'>
     {items.map(item=>{
         return(
@@ -29,7 +34,7 @@ return(
                 <img src={item.image} alt="unable to load"></img>
                 <p>£{item.price}</p>
                 <p>{item.description}</p>
-                <button class="trolleybtn"><FaShoppingCart/></button>
+                <button class="trolleybtn" onClick={()=>handleClick(item)}><FaShoppingCart/></button>
             </article>
         )
     })}
@@ -38,5 +43,5 @@ return(
 )
 }
 
-export default Menswear
 
+export default Menswear

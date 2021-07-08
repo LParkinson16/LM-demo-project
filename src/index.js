@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Routing from './components/routing'
+import Routing from './components/routing';
 
 
 ReactDOM.render(

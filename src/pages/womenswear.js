@@ -2,6 +2,8 @@ import axios from 'axios'
 import {useEffect, useState} from 'react'
 /*import NavBar from '../components/navBar'*/
 import { FaShoppingCart } from 'react-icons/fa';
+import { FaShoppingBasket } from 'react-icons/fa'
+import { useCart, useCartUpdate } from '../components/context';
 
 
 function WomensWear(){
@@ -17,11 +19,14 @@ function WomensWear(){
         })
     },[])
 
+const cart = useCart()
+const handleClick = useCartUpdate()    
 
 return(
 <div className="App">
     {/*<NavBar/>*/}   
     <h1>Women</h1>
+    <h1><FaShoppingBasket/> {cart.length}</h1>
     <div className="item-list">
         {items.map(item=>{
             return(
@@ -31,7 +36,7 @@ return(
                 <p>£{item.price}</p>
                 <p>{item.name}</p>
                 <p>{item.description}</p>
-                <button class="trolleybtn"><FaShoppingCart/></button>
+                <button class="trolleybtn" onClick={()=>handleClick(item)}><FaShoppingCart/></button>
             </article>
             )
             })}

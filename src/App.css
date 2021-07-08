@@ -78,6 +78,20 @@ body{
   min-height:850px;
 }
 
+.itemCountCard{
+  display:inline-flex;
+  flex-direction: column;
+  margin-top:4em;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 2%;
+  width: 22%;
+  color: #333;
+  box-shadow:0 1px 2px rgba(0,0,0,0.25);
+  min-height:500px;
+}
 /*think about adding a dropdown for text overflow*/
 
 .nav{
@@ -120,6 +134,7 @@ body{
   border-radius:30px;
   border:1px solid grey;
   margin-top:1%;
+  outline:none;
 }
 
 #navImg{
@@ -132,12 +147,18 @@ body{
 
 .navicons{
   display:flex;
-  justify-content:flex-end;
 }
 
-.navicons > homeicon{
-  display:flex;
-  justify-content:flex-start; 
+.navicons .basketicon{
+  justify-content: flex-end;
+}
+
+.homeicon :hover{
+  transition: 0.5s;
+  transform: translateY(-0.30em);
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  cursor:pointer;
+  color:rgb(254, 189, 105);
 }
 
 .trolleybtn{
@@ -167,6 +188,14 @@ body{
   padding:none;
 }
 
+.basketicon:hover{
+  transition: 0.5s;
+  transform: translateY(-0.30em);
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  cursor:pointer;
+  color:rgb(254, 189, 105);
+}
+
 .homeicon{
   color:white;
   font-size: 2.5em;
@@ -182,4 +211,24 @@ body{
 #welcome{
   margin-top:25%;
   margin-bottom:50%;
+}
+
+.cartCard{
+  display:inline-flex;
+  flex-direction: column;
+}
+.cartCard{
+  margin-top:4em;
+  background: #fff;
+  position: relative;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 2%;
+  width: 22%;
+  color: #333;
+  box-shadow:0 1px 2px rgba(0,0,0,0.25)
+}
+
+.cartCard{
+  min-height:400px;
 }
