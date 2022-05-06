@@ -149,11 +149,12 @@ body{
   display:flex;
 }
 
-.navicons .basketicon{
-  justify-content: flex-end;
+.basketicon{
+  position: relative;
+  margin-left:100%;
 }
 
-.homeicon :hover{
+.homeicon:hover{
   transition: 0.5s;
   transform: translateY(-0.30em);
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -172,6 +173,10 @@ body{
   border:1px solid rgba(128, 128, 128, 0.212);
   outline: none;
 }
+.trolleybtn{
+  position:sticky;
+  top:100%;
+}
 
 .trolleybtn:hover{
   transition: 0.5s;
@@ -184,7 +189,7 @@ body{
 
 .basketicon{
   color:white;
-  font-size: 2.5em;
+  font-size: 3em;
   padding:none;
 }
 
@@ -198,7 +203,7 @@ body{
 
 .homeicon{
   color:white;
-  font-size: 2.5em;
+  font-size: 3em;
   padding:none;
 }
 

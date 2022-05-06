@@ -7,12 +7,11 @@ import { FaShoppingBasket } from 'react-icons/fa'
 import { FaHome } from 'react-icons/fa'
 import '../App.css'
 import './font.css'
-/*import Cart from './cart';*/
+import Cart from './cart';
 import Footer from './footer'
 import ItemCount from "./itemCount";
-import { Context } from './context'
 
-function Routing() {
+function Routing() {      
     return (
         <div className="App">
             <Router>
@@ -55,12 +54,11 @@ function Routing() {
 
 
                 <Switch>
-                    <Context>
-                        <Route path="/" exact component={App} />
-                        <Route path="/men" exact component={Menswear} />
-                        <Route path="/women" exact component={WomensWear} />
-                        <Route path="/cart" exact component={ItemCount} />
-                    </Context>
+                    <Route path="/" exact component={App} />
+                    <Route path="/men" exact component={Menswear} />
+                    <Route path="/women" exact component={WomensWear} />
+                    <Route path="/cart" exact component={ItemCount} />
+                    <Route path="*" exact component={App} /> {/** browser will re-reoute erroneous endpoints to the homepage*/}
                 </Switch>
             </Router>
             <Footer />
